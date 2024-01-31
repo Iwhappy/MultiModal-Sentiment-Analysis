@@ -43,6 +43,7 @@ pip install -r requirements.txt
 ├── train.py 
 ├── bert-base-multilingual-cased/ #预训练BERT模型
 ```
+
 ## 数据文件
 data文件中包含着txt和image文件，虽未上传至此平台，如果需要，仍可以通过链接获取。
 ```
@@ -50,7 +51,14 @@ data文件中包含着txt和image文件，虽未上传至此平台，如果需�
 提取码：p9vy 
 --来自百度网盘超级会员V5的分享
 ```
-
+## 最佳模型文件
+model_best.pth、model_best_option_0.pth、model_best_option_1.pth、model_best_option_2.pth这四个文件超过了3gb，虽未上传至此平台，如果需要，仍可以通过链接获取。
+![image](https://github.com/Iwhappy/MultiModal-Sentiment-Analysis/assets/96427037/0ef1c059-77ba-43ce-885c-d31f85f4b2c7)
+```
+链接：https://pan.baidu.com/s/1nnYyoQ821p6PLUzGlum3vA?pwd=0bpm 
+提取码：0bpm 
+--来自百度网盘超级会员V5的分享
+```
 ## 代码执行流程
 
 ### 1. 数据预处理
@@ -64,7 +72,7 @@ python data_process.py --batch_size BATCH_SIZE --num_workers NUM_WORKERS
 BATCH_SIZE: DataLoader 的批处理大小，默认为 64
 NUM_WORKERS: DataLoader 的工作线程数，默认为 4
 ```
-执行此命令后将在`dataset/dataloader`目录下生成三个文件:
+执行此命令后将在`dataloader`目录下生成三个文件:
 ```
 train_dataloader.pth
 val_dataloader.pth
@@ -82,6 +90,13 @@ python train.py --epochs EPOCHS --lr LR
 ```
 EPOCHS: 训练的轮数，默认为 10
 LR: 学习率，默认为 1e-4
+```
+执行此命令后生成四个文件:
+```
+model_best.pth #保存的最佳多模态模型
+model_best_option_0.pth #保存的只有图像数据输入时的最佳模型
+model_best_option_1.pth #保存的只有文本数据输入时的最佳模型
+model_best_option_2.pth #保存的图像和文本输入的双模态融合最佳模型，其实跟model_best.pth相同
 ```
 
 由于代码中默认是多模态，执行此命令将使用训练和验证模型，并在每个轮次中对比生成并保存最佳多模态模型:
