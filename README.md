@@ -21,23 +21,16 @@ pip install -r requirements.txt
 
 
 ## 文件结构
-```
+```python
 ├── dataset
-    ├── data
-    │   ├── 1.jpg
-    │   ├── 1.txt
-    │   ├── 2.jpg
-    │   ├── 2.txt
-    │   ├── 3.jpg
-    │   ├── 3.txt
-    │   ├── ...
-    ├── dataloader
-    │   ├── test_dataloader.pth
-    │   ├── train_dataloader.pth
-    │   └── val_dataloader.pth
+    ├── data/ #由于数据文件过大，并未上传至GitHub上
     ├── test_without_label.txt #测试数据
     ├── test_with_pred_label.txt #最终预测结果
     └── train.txt #训练数据的guid和对应的情感标签
+├── dataloader
+    ├── test_dataloader.pth
+    ├── train_dataloader.pth
+    └── val_dataloader.pth
 ├── model_best.pth #保存的最佳多模态模型
 ├── model_best_option_0.pth #保存的只有图像数据输入时的最佳模型
 ├── model_best_option_1.pth #保存的只有文本数据输入时的最佳模型
