@@ -43,7 +43,13 @@ pip install -r requirements.txt
 ├── train.py 
 ├── bert-base-multilingual-cased/ #预训练BERT模型
 ```
-
+## 数据文件
+data文件中包含着txt和image文件，虽未上传至此平台，如果需要，仍可以通过链接获取。
+```
+链接：https://pan.baidu.com/s/1geKBqTw96gOFqSm3V_OpHg?pwd=p9vy 
+提取码：p9vy 
+--来自百度网盘超级会员V5的分享
+```
 
 ## 代码执行流程
 
